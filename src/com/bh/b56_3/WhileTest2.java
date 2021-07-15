@@ -22,6 +22,7 @@ public class WhileTest2 {
 			int num = sc.nextInt();
 			switch(num) {
 			case 1:
+				System.out.println("로그인을 시도합니다.");
 				System.out.println("ID 입력");
 				yid = sc.nextInt();
 				System.out.println("PW 입력");
@@ -31,6 +32,7 @@ public class WhileTest2 {
 					System.out.println("로그인 성공");
 					check = !check; //false
 				}else {
+					System.out.println("로그인 실패");
 					break;
 				}
 				break;
@@ -59,12 +61,13 @@ public class WhileTest2 {
 		int lv = 0; //level 변수선언
 		int mon = 0; //monster 변수선언
 		boolean check2 = true;
-		if(yid==id && ypw == pw) {
-			System.out.println("RPG GAME START");
+		//로그인판단 = boolean타입으로
+		if(!check) {
+			System.out.println("💕 RPG GAME START 💕");
 			
 			while(check2) {
 			for(lv=1;lv<=15;lv++) {
-				System.out.println("현재 레벨은 "+lv+"Lv입니다.");
+				System.out.println("현재 레벨은 Lv"+lv+"입니다.");
 				
 				if(lv%5==0) {
 				gold= gold+1000;
@@ -81,7 +84,7 @@ public class WhileTest2 {
 				for(int i=0;i<mon;i++) {
 					System.out.println("몬스터 "+(i+1)+"마리 사냥 성공 (๑˃̵ᴗ˂̵๑)♡");
 				}
-				System.out.println("♥ㅁㅁㅁㅁㅁㅁㅁㅁLEVEL UPㅁㅁㅁㅁㅁㅁㅁㅁ♥");
+				System.out.println("☹☻☹☻☹☻☹ LEVEL UP ☹☻☹☻☹☻☹");
 
 				}
 			
