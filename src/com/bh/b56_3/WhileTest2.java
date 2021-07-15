@@ -60,22 +60,22 @@ public class WhileTest2 {
 		int gold = 0; //gold 변수선언
 		int lv = 0; //level 변수선언
 		int mon = 0; //monster 변수선언
-		boolean check2 = true;
-		//로그인판단 = boolean타입으로
+		
+		//로그인판단 = boolean타입으로 이걸 활용하자
 		if(!check) {
 			System.out.println("💕 RPG GAME START 💕");
 			
-			while(check2) {
+
 			for(lv=1;lv<=15;lv++) {
 				System.out.println("현재 레벨은 Lv"+lv+"입니다.");
 				
 				if(lv%5==0) {
-				gold= gold+1000;
+				gold= gold+lv/5*1000;
 				System.out.println("Lv"+lv+" "+gold+"gold 획득!");
 				}
 				
 				if(lv==15) {
-					check2=!check2;
+
 					break;
 				}
 				
@@ -88,7 +88,7 @@ public class WhileTest2 {
 
 				}
 			
-			}
+			
 		System.out.println("최종 레벨 = "+lv+"Level");
 		System.out.println("최종 골드 = "+gold+"Gold");
 		}
