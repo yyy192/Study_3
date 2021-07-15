@@ -15,7 +15,7 @@ public class Array_3 {
 		System.out.println(ar2[0]); //예상 10
 		
 		ar1[1] = 1111;
-		//깊은 복사 - 배열. 가져옴
+		//깊은 복사 - 배열 가져옴
 		System.out.println(ar2[1]); //예상 1111
 		
 		int [] ar3 = new int[ar1.length];
