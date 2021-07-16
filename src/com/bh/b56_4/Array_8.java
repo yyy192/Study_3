@@ -41,27 +41,37 @@ public class Array_8 {
 					System.out.println(fale);
 					break;
 				case 2:
-					nids = new int[ids.length+1];
-					for(int a=0;a<ids.length;a++) {
-						nids[a]=ids[a];
-					}
-					npws = new int [ids.length+1];
-					for(int b=0;b<pws.length;b++) {
-						npws[b] = pws[b];
-					}
-					System.out.println("회원가입 실패");
+					int n = 0;
 					System.out.println("새로운 ID를 입력");
+					nids = new int[ids.length+1];
 					nids[ids.length] = sc.nextInt();
+					for(int a=0; a<ids.length;a++) {
+						nids[a] = ids[a];
+					}
 					
-					System.out.println("새로운 PW를 입력");
-					npws[pws.length] = sc.nextInt();
 					for(int j=0;j<ids.length;j++) {
 						if(nids[ids.length]==ids[j]) {
 							System.out.println("이미 있는 ID 입니다.");
+							System.out.println("회원 가입 실패");
+							n = 1;
 						break;
 						}
+					}	
+					
+					if (n==1) {
+						break;
+					}else {
+						System.out.println("새로운 PW를 입력");
+						npws = new int [pws.length+1];
+						npws[pws.length] = sc.nextInt();
+						for(int b=0;b<pws.length;b++) {
+							npws[b] = pws[b];
+						}
+					
 						ids = nids;
+						pws = npws;
 					}
+					
 					break;
 				case 3:
 					System.out.println("종   료");
