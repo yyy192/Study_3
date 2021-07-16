@@ -69,7 +69,7 @@ public class Array_8 {
 					break;
 				default:
 					System.out.println("번호를 잘못 입력");
-					System.out.println("다시 입력해봐");
+					System.out.println("다시 입력");
 					break;
 			}
 		}	
