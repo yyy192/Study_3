@@ -13,6 +13,11 @@ public class Array_8 {
 		//로그인은 아이디,비번 입력받기
 		//회원가입은 아이디,비번 배열에 추가하기(중복x)
 		
+		//로그인 성공 후
+		//메인메뉴 출력 1. 로그아웃 2. 회원탈퇴 3. 종료
+		//로그아웃 누르면 다시 1. 로그인 2. 회원가입 3. 종료 출력
+		//회원탈퇴 누르면 로그인 한 아이디, 비밀번호 삭제
+		
 		int total = 0;
 		int uids = 0;
 		int upws = 0;
@@ -39,9 +44,11 @@ public class Array_8 {
 						}
 					}
 					System.out.println(fale);
+					
 					break;
 				case 2:
 					int n = 0;
+					
 					System.out.println("새로운 ID를 입력");
 					nids = new int[ids.length+1];
 					nids[ids.length] = sc.nextInt();
@@ -82,7 +89,8 @@ public class Array_8 {
 					System.out.println("다시 입력");
 					break;
 			}
-		}	
+		}
+		
 	}
 
 }
