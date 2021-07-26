@@ -1,4 +1,4 @@
-package com.bh.b56_4;
+ package com.bh.b56_4;
 
 import java.util.Scanner;
 
